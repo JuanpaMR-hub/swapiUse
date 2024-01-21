@@ -1,0 +1,18 @@
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    list-style-type: none;
+}
+
+li{
+    text-decoration: nones;
+}
+
+img {
+    float: left;
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 15px;
+}

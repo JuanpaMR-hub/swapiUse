@@ -1,0 +1,43 @@
+[
+    {
+        "name":"Luke Skywalker",
+        "image":"https://img.europapress.es/fotoweb/fotonoticia_20150620132813_640.jpg"
+    },
+    {
+        "name":"C-3PO",
+        "image":"https://media.vandalsports.com/master/6-2022/202267175430_1.jpg"
+    },
+    {
+        "name":"R2-D2",
+        "image":"https://lumiere-a.akamaihd.net/v1/images/r2-d2-main_f315b094.jpeg?region=364%2C0%2C716%2C536"
+    },
+    {
+        "name":"Darth Vader",
+        "image":"https://www.latercera.com/resizer/NRNVtGXLZ4koN7HWqudc8nyv3cs=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/LS6NAJWL4ZA4PMRN4MTK5YYLBE.jpeg"
+    },
+    {
+        "name":"Leia Organa",
+        "image":"https://www.concierto.cl/wp-content/uploads/2021/07/Princesa-Leia-Organa-Star-Wars.jpeg"
+    },
+    {
+        "name":"Owen Lars",
+        "image":"https://lumiere-a.akamaihd.net/v1/images/owen-lars-main_08c717c8.jpeg?region=8%2C0%2C774%2C774"
+    },
+    {
+        "name":"Beru Whitesun lars",
+        "image":"https://www.figurerealm.com/userimages/characterprofiles/2500/2466-2-58cbe33f4de09.jpg"
+    },
+    {
+        "name":"R5-D4",
+        "image":"https://www.slashfilm.com/img/gallery/is-r5-d4-the-same-droid-from-star-wars-a-new-hope-an-investigation/l-intro-1678268003.jpg"
+    },
+    {
+        "name":"Biggs Darklighter",
+        "image":"https://themovieandthemuse.files.wordpress.com/2016/12/biggs-darklighter.jpg?w=640"
+    },
+    {
+        "name":"Obi-Wan Kenobi",
+        "image":"https://ca-times.brightspotcdn.com/dims4/default/10beaaa/2147483647/strip/true/crop/1263x720+0+0/resize/1200x684!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F57%2F32%2F9f488c2d4bc288bcfce63e749811%2Fobi-wan.JPG"
+    }
+
+]
