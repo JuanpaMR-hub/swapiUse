@@ -1,25 +1,7 @@
-const info = document.querySelector(".cast");
+const info = $(".cast");
 const baseUrl = "https://swapi.dev/api/";
-const searchBtn = document.querySelector("#btnBuscar");
-const filmsInput = document.querySelector("#film");
-
-
-/* TO DO
-1) Guardar los datos en la memoria local y posteriormente cargarlos desde ese almacenamiento 
-    Razon: Demora mucho la carga luego de un tiempo, quizás es por la hora
-    Podria hacer que el codigo busque en primera instancia en la memoria local y en caso de que no exista, realizar el fetch
-    Lo que hay que guardar sería:
-        1. Array de objetos de las peliculas que tengan los sgtes elementos ["title","characters"] -> Para la página inicio
-        2. Array de objetos de los personajes que tengan los sgtes elementos ["name","films"] -> Para la página personaje
-
-2) Manipular el fetch en una función con parametros
-    Razón: DRY + función avanzada de la clase que lo piden
-
-3) Incorporar alguna libreria
-    Razón: lo pide en el enunciado
-    
-*/
-
+const searchBtn = $("#btnBuscar");
+const filmsInput = $("#film");
 
 function search(url){
     return fetch(url)
@@ -36,16 +18,16 @@ search(baseUrl+"/films").then(res => {
         option.setAttribute('value',index+1);
         option.innerHTML = film.title;
 
-        filmsInput.appendChild(option);
+        filmsInput.append(option);
     })
 })
 
 
-searchBtn.addEventListener("click",(event)=>{
+searchBtn.on("click",(event)=>{
     info.innerHTML = "";
 
     
-    const film = document.querySelector("#film").value;
+    const film = $("#film").val();
     search(`${baseUrl}/films/${film}`).then(filmData => {
         filmData.characters.forEach(characterURL =>{
             search(characterURL).then(character=>{
@@ -64,8 +46,8 @@ searchBtn.addEventListener("click",(event)=>{
 
                     
                 })
-                li.appendChild(img);
-                info.appendChild(li)
+                li.append(img);
+                info.append(li)
             })
         })
     })
