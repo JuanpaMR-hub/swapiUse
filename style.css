@@ -1,3 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    background-image: url("https://cdn.wallpapersafari.com/81/95/Z7D2q6.jpg");
+    font-family: 'Press Start 2P', system-ui;
+}
+.prompt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh;
+}
+select{
+    width: 50%;
+    margin: 30px;
+    text-align: center;
+}
+#btnBuscar{
+    width: 10%;
+    height: 20%;
+}
+
+
+.info{
+    
+    margin: 0 auto;
+    width: 90%;
+
+}
 ul{
     display: flex;
     flex-wrap: wrap;
@@ -15,4 +44,10 @@ img {
     height: 200px;
     object-fit: cover;
     margin: 15px;
+
+    border: 1px solid gold;
+
+    line-height: 50px;
+    text-align: center;
+    color: wheat;
 }

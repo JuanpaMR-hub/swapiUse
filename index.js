@@ -3,6 +3,14 @@ const baseUrl = "https://swapi.dev/api/";
 const searchBtn = $("#btnBuscar");
 const filmsInput = $("#film");
 
+/*
+
+To do:
+
+1) Use local storage for saving the fetched data
+2) Use Sweet Alert to display character info if clicked
+*/
+
 function search(url){
     return fetch(url)
     .then(response =>{return response.json()})
@@ -24,8 +32,7 @@ search(baseUrl+"/films").then(res => {
 
 
 searchBtn.on("click",(event)=>{
-    info.innerHTML = "";
-
+    info.empty();
     
     const film = $("#film").val();
     search(`${baseUrl}/films/${film}`).then(filmData => {
