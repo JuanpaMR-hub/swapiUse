@@ -1,21 +1,29 @@
+
+
+
 const info = $(".cast");
 const baseUrl = "https://swapi.dev/api/";
 const searchBtn = $("#btnBuscar");
 const filmsInput = $("#film");
-
-/*
-
-To do:
-
-1) Use local storage for saving the fetched data
-2) Use Sweet Alert to display character info if clicked
-*/
+const characterIMG = $(".characterIMG");
 
 function search(url){
     return fetch(url)
     .then(response =>{return response.json()})
     .then(data => {return data})
 }
+
+function showCharacter(element){
+    
+    Swal.fire({
+        title: element.alt,
+        imageUrl: element.src,
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Custom image"
+      });
+}
+
 
 
 
@@ -31,6 +39,8 @@ search(baseUrl+"/films").then(res => {
 })
 
 
+
+
 searchBtn.on("click",(event)=>{
     info.empty();
     
@@ -38,6 +48,9 @@ searchBtn.on("click",(event)=>{
     search(`${baseUrl}/films/${film}`).then(filmData => {
         filmData.characters.forEach(characterURL =>{
             search(characterURL).then(character=>{
+                let a = document.createElement("a")
+                a.setAttribute('href','#')
+                
                 let li = document.createElement("li");
                 let img = document.createElement("img");
 
@@ -48,17 +61,21 @@ searchBtn.on("click",(event)=>{
                     img.setAttribute("src",characterIMG.image);
                     img.setAttribute("alt",characterIMG.name)
                 }).catch(err =>{
-                    console.log(err)
+                    // console.log(err)
                     img.setAttribute("alt",character.name)
 
                     
                 })
-                li.append(img);
+                a.setAttribute("onclick","showCharacter(this.children[0])")
+                a.append(img)
+                li.append(a);
                 info.append(li)
             })
         })
     })
 })
+
+
 
 
 
